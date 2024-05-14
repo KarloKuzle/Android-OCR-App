@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405151999300",
+    "project_id": "android-ocr-f6f80",
+    "storage_bucket": "android-ocr-f6f80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405151999300:android:e5d28ebfeb91bc2d8ae311",
+        "android_client_info": {
+          "package_name": "com.example.thesis_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfv65YeWkk38AR2smCoV9zUyNiybCKsUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

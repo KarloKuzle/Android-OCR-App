@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thesis_app"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:value="ocr" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
