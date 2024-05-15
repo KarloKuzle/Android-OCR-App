@@ -35,24 +35,19 @@ class MyImageAnalyzer(onTextFound: (String) -> Unit) : ImageAnalysis.Analyzer{
     @ExperimentalGetImage
     override fun analyze(imageProxy: ImageProxy) {
         val image = imageProxy.image ?: return
-        // val croppedImage = InputImage.fromMediaImage(image, imageProxy.imageInfo.rotationDegrees)
-
-
-
 
         val bmp = convertImageToBitmap(image)
-
 
         val height = bmp.height
         val width = bmp.width
 
-        var left: Int
-        var right: Int
-        var top: Int
-        var bottom: Int
-        var diameter: Int
+//        var left: Int
+//        var right: Int
+//        var top: Int
+//        var bottom: Int
+//        var diameter: Int
 
-        diameter = width
+        var diameter = width
         if (height < width){
             diameter = height
         }
@@ -60,16 +55,16 @@ class MyImageAnalyzer(onTextFound: (String) -> Unit) : ImageAnalysis.Analyzer{
         val offset = (0.05 * diameter).toInt()
         diameter -= offset
 
-        left = width / 2 - diameter / 3
-        top = height / 2 - diameter / 3
-        right = width / 2 + diameter / 3
-        bottom = height / 2 + diameter / 3
+        val left = width / 2 - diameter / 3
+        val top = height / 2 - diameter / 3
+        val right = width / 2 + diameter / 3
+        val bottom = height / 2 + diameter / 3
 
         val boxHeight = bottom - top
         val boxWidth = right - left
 
         // Cropped bitmap
-        var bitmap = Bitmap.createBitmap(bmp, left, top, boxWidth, boxHeight)
+        var bitmap = Bitmap.createBitmap(bmp, left, top * 2 / 3, boxWidth, boxHeight)
 
         val croppedImage = InputImage.fromBitmap(bitmap, imageProxy.imageInfo.rotationDegrees)
 

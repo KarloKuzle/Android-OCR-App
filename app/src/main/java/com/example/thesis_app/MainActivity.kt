@@ -24,28 +24,23 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     // SurfaceView surfaceView = binding.overlay
 
-    private var cameraHeight: Int = 0
-    private var cameraWidth: Int = 0
-    public var xOffset: Int = 0
-    public var yOffset: Int = 0
+//    private var cameraHeight: Int = 0
+//    private var cameraWidth: Int = 0
+//    public var xOffset: Int = 0
+//    public var yOffset: Int = 0
 
     private lateinit var canvas: Canvas
     private lateinit var paint: Paint
     private lateinit var holder: SurfaceHolder
 
-//    public fun getBoxWidth() : Int{
-//        return boxWidth
-//    }
-//    public fun getBoxHeight() : Int{
-//        return boxHeight
-//    }
+
     private val isAllPermissionsGranted get() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(this, it) == PackageManager.PERMISSION_GRANTED
     }
 
     companion object {
-        public var boxWidth: Int = 0
-        public var boxHeight: Int = 0
+//        public var boxWidth: Int = 0
+//        public var boxHeight: Int = 0
         private val TAG = MainActivity::class.java.name
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
@@ -121,8 +116,7 @@ class MainActivity : AppCompatActivity() {
         val height = binding.previewView.height
         val width = binding.previewView.width
 
-        cameraHeight = height
-        cameraWidth = width
+
 
         var left: Int
         var right: Int
@@ -149,14 +143,14 @@ class MainActivity : AppCompatActivity() {
         left = width / 2 - diameter / 3
         top = height / 2 - diameter / 3
         right = width / 2 + diameter / 3
-        bottom = height / 2 + diameter / 2
+        bottom = height / 2 + diameter / 3
 
-        xOffset = left
-        yOffset = top
-        boxHeight = bottom - top
-        boxWidth = right - left
+//        xOffset = left
+//        yOffset = top
+//        boxHeight = bottom - top
+//        boxWidth = right - left
 
-        canvas.drawRect(left.toFloat(), top.toFloat(), right.toFloat(), bottom.toFloat(), paint)
+        canvas.drawRect(left.toFloat(), top.toFloat() * 2 / 3, right.toFloat(), bottom.toFloat() * 2 / 3, paint)
         holder.unlockCanvasAndPost(canvas)
     }
 
