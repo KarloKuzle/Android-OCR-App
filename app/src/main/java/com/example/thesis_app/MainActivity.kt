@@ -149,7 +149,7 @@ class MainActivity : AppCompatActivity() {
         left = width / 2 - diameter / 3
         top = height / 2 - diameter / 3
         right = width / 2 + diameter / 3
-        bottom = height / 2 + diameter / 3
+        bottom = height / 2 + diameter / 2
 
         xOffset = left
         yOffset = top

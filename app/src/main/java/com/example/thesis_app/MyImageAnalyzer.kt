@@ -38,19 +38,7 @@ class MyImageAnalyzer(onTextFound: (String) -> Unit) : ImageAnalysis.Analyzer{
         // val croppedImage = InputImage.fromMediaImage(image, imageProxy.imageInfo.rotationDegrees)
 
 
-//        try {
-//            val images = FirebaseVisionImage.fromMediaImage(image, imageProxy.imageInfo.rotationDegrees)
-//
-//        }catch (e: Exception){
-//            print(e)
-//        }
-//        val bmp = images.bitmap
 
-
-//        val displayMetrics = DisplayMetrics()
-//        MainActivity().winMan.defaultDisplay.getMetrics(displayMetrics)
-//        val images = FirebaseVisionImage.fromMediaImage(image, imageProxy.imageInfo.rotationDegrees)
-//        val bmp = images.bitmap
 
         val bmp = convertImageToBitmap(image)
 
