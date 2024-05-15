@@ -64,7 +64,7 @@ class MyImageAnalyzer(onTextFound: (String) -> Unit) : ImageAnalysis.Analyzer{
         val boxWidth = right - left
 
         // Cropped bitmap
-        var bitmap = Bitmap.createBitmap(bmp, left, top * 2 / 3, boxWidth, boxHeight)
+        var bitmap = Bitmap.createBitmap(bmp, left, top * 2 / 3, boxWidth * 2 / 3, boxHeight)
 
         val croppedImage = InputImage.fromBitmap(bitmap, imageProxy.imageInfo.rotationDegrees)
 
