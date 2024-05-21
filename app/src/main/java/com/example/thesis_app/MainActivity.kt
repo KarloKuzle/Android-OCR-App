@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
     private val cameraAdapter = CameraAdapter {
         val regex1 = """^\d+.*$""".toRegex()
         if (regex1.matches(it)){
-            val regex2 = """^\d+([.,]\d+)?$"""
+            val regex2 = """^\d+([.,]+\d+)?$"""
                 .toRegex()
             val eur = regex2.find(it)?.value
             val kune = eur?.toFloatOrNull()?.times(7.5345)
