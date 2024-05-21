@@ -69,7 +69,9 @@ class MainActivity : AppCompatActivity() {
             val eur = regex2.find(it)?.value
             val kune = eur?.toFloatOrNull()?.times(7.5345)
             val kuneRounded = kune?.toBigDecimal()?.setScale(2, RoundingMode.UP)
-            binding.textView.text = "$eur Eur -> $kuneRounded Kn"
+            if (eur != null){
+                binding.textView.text = "$eur Eur -> $kuneRounded Kn"
+            }
 
         }
         // binding.textView.text = it
