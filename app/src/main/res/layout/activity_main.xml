@@ -38,7 +38,7 @@
             android:id="@+id/text_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Pokažite kamerom na cijenu proizvoda"
+            android:text="Željena cijena mora u cijelosti popuniti zeleni pravokutnik"
             android:gravity="center"
             android:background="#80000000"
             android:textColor="#FFFFFF"
